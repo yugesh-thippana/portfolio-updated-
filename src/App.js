@@ -78,7 +78,7 @@ const MainApp = ({setMenuEnabled}) =>{
   }
 
   return(
-    <div id = "butter">
+    <div id = "butter" className="banner-right-scroll">
       <Routes>
         <Route path="/" element = {
           <> 
@@ -137,7 +137,7 @@ function App() {
 
 
   return (
-    <StyledRoot className="App" bg = {bg} primary = {primary} ref = {appRef} >
+    <StyledRoot className="App banner-right-scroll" bg = {bg} primary = {primary} ref = {appRef} >
       {
         loading ? 
           <LoadingComponent setLoading = {setLoading}/> :

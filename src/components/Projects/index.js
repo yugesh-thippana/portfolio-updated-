@@ -26,7 +26,7 @@ function Projects() {
             <StyledCursorMedia className="cursor-media">
               {data.map((project, index) => (
                   <video
-                  src="https://www.dofactory.com/media/movie.mp4"
+                  src={project.video}
                   preload="auto"
                   autoPlay
                   muted

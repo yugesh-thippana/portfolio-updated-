@@ -22,7 +22,9 @@ const Banner = () => {
   }, [])
   return (
     <motion.div className='banner' variants={banner} style = {{
-      display: "flex", alignItems: "center"
+      display: "flex", alignItems: "center",
+      height: "calc(100vh - 100px)",
+
     }}>
       <motion.div className="left" initial= {{x: -300, opacity: 0}} animate = {{ x: 0, opacity: 1, transition: {duration: 1} }}>
         <div className="banner-row">
@@ -57,12 +59,11 @@ const Banner = () => {
 const BannerRight = () => {
   const { white } = useContext(Context)
   return (
-    <div style = {{display: "flex", justifyContent: "flex-end"}}>
-      <motion.div initial= {{x: 300, opacity: 0}} animate = {{x: 0, opacity:1, transition: {duration: 1}}}>
-        <StyledBannerRight style = {{ border: "2px solid " + white, 
-          width: "calc(100% - 100px)", 
-          maxWidth: "550px", 
-          minHeight: "550px", 
+    <div style = {{display: "flex", justifyContent: "flex-end"}} className = "banner-right-scroll">
+      <motion.div initial= {{x: 300, opacity: 0}} animate = {{x: 0, opacity:1, transition: {duration: 1}}} className="banner-right-scroll">
+        <StyledBannerRight className = "banner-right-scroll" style = {{ border: "2px solid " + white, 
+          width: "450px",
+          height: "calc(100vh - 250px)",
           maxHeight: "600px", 
           overflowY: "auto" ,
           marginRight: 0,
