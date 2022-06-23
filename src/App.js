@@ -131,7 +131,8 @@ const MainAppMemo = memo(MainApp)
 function App() {
   const {bg, primary} = useContext(Context)
   const [loading, setLoading] = useState(true) 
-  const [ setMenuEnabled] = useState(false)
+  // eslint-disable-next-line
+  const [ menuEnabled, setMenuEnabled] = useState(false)
   const appRef = useRef()
 
 

@@ -54,7 +54,7 @@ export default function TextCarousal(props) {
   }, [])
 
   return textArray && (
-    <span class="txt-rotate">
+    <span className="txt-rotate">
         <StyledWrap style = {style}> {activeState} </StyledWrap>
     </span>
   )
