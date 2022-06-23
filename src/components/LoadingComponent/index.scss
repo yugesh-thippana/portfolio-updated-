@@ -1,0 +1,114 @@
+.bowl 
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    border: 8px solid transparent;
+    transform-origin: bottom center;
+    overflow: hidden;
+    // filter: hue-rotate(320deg) opacity(80%) brightness(300%);
+    filter: brightness(0) invert(1);
+
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(4deg);
+    }
+    22.5%
+    {
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: rotate(4deg);
+    }
+    50%
+    {
+        transform: rotate(0deg);
+    }
+    72.5%
+    {
+        transform: rotate(-4deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.bowl::after 
+{
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    width: 150px;
+    height: 80px;
+    background: rgba(255,255,255,0.05);
+} 
+.liquid 
+{
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: #41c1fb;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    filter: drop-shadow(0 0 80px #41c1fb);
+    transform-origin: top center;
+
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+    background-repeat: repeat-x;
+    animation: wave 4s;
+    background-position: 450% 100%;
+    
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0% -550%;
+    }
+
+    20% {
+        background-position: 150% -250%;
+    }
+    // 90% {
+    //     background-position: 400% -50%;
+    // }
+
+    100% {
+        background-position: 450% 100%;
+    }
+}
+
+.shadow 
+{
+    position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 30px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+}
+

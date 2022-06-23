@@ -1,0 +1,29 @@
+.project-description {
+    .maintext {
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: bold;
+        letter-spacing: 0.05rem;
+        padding: 25px 0;
+    }
+
+    .text {
+        text-align: left;
+        font-size: 1.4rem;
+        padding: 15px 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .divide {
+        display: flex;
+        justify-content: space-between;
+    }
+    .divide img {
+        max-width: 48%;
+    }
+}

@@ -1,0 +1,60 @@
+
+@font-face {
+  font-family: luzia;
+  src: url(fonts/luzia.woff2);
+}
+  
+body {
+  margin: 0;
+  font-family: luzia;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.6s;
+}
+
+.hero-inner-links { 
+  font-family: luzia;
+}
+
+
+.hero-inner-link-item {
+  .hero-inner-link-item-padding {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -30vh;
+      bottom: -30vh;
+      left: 0;
+      right: 0;
+    }
+  }
+  a {
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    // color: rgba(255, 255, 255, 0.305);
+    color: transparent;
+    transition: color 0.3s, -webkit-text-stroke 0.3s;
+    -webkit-text-stroke: 2.5px #fff;
+    span {
+      line-height: 1.1;
+      font-weight: 700;
+      text-shadow: none;
+      font-size: 5vw;
+    }
+  }
+  &:first-child {
+    a {
+      padding-left: 0;
+    }
+  }
+  &:last-child {
+    a {
+      padding-right: 0;
+    }
+  }
+}
