@@ -49,7 +49,8 @@ function Project ({project, index}) {
 
   return (
     <Link to = {`/projects/${project.routeName}`} style = {{
-      color: primary
+      color: primary,
+      textDecoration: "none",
     }}  >
       <ProjectItem 
         index = {index} 
